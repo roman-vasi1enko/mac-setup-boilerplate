@@ -28,6 +28,23 @@ brew install --cask \
   postman docker mongodb-compass rectangle \
   obsidian 1password alt-tab meetingbar
 
+echo "🌩 Installing AWS CLI and related tools..."
+# AWS CLI v2
+brew install awscli
+
+# IAM Authenticator (for EKS clusters)
+brew install aws-iam-authenticator
+
+# SSM Session Manager Plugin (for port forwarding and remote commands)
+brew install session-manager-plugin
+
+# ECS CLI (if you ever work with ECS)
+brew install amazon-ecs-cli
+
+# AWS CDK (infrastructure-as-code via TypeScript/Python)
+npm install -g aws-cdk
+
+
 # Node & Python setup
 export NVM_DIR="$HOME/.nvm"
 source "$(brew --prefix nvm)/nvm.sh"
